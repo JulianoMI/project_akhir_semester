@@ -7,18 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="top"> <img src="Netflix.png" alt="" class="netfliximage"> 
+    <nav class="top"> <a href="#Home"><img src="Netflix.png" alt="" class="netfliximage"></a> 
         <div class="categories">
          <div class="left">
             <a href="">Home</a>
             <a href="">TV Shows</a>
+            <a href="">Movies</a>
             <a href="">New & Popular</a>
-            <a href=""> My List</a>
+            <a href="">My List</a>
         </div>   
         <div class="right">
-            
+            <div class="box">
+                <input type="text" placeholder="Search...">
+                <a href="#">
+                    <i class="fas fa-search">🔍</i>
+                </a>
+            </div>
+            <a href="#">Kids</a>
+            <a href="#">🔔</a>
+            <div class="profile"></div>
         </div>
     </div></nav>
+<div class="big-pictures">
+    <div class="picture-slide">
+        <img src="frieren.webp" alt="" class="title-page">
+        <img src="https://occ-0-2342-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQjxESzPBtiYUkTrwm1X7WZUPOVH1lrglizyGEelM6a5DlRZC0Q0dj3og2MOFX9m9D-xEy8FnW9aOB1Py1tqeMSHJN-AHC-fZ6Bv.webp?r=e24" alt="Image 1" class="frierenimage">
+    </div>
+    <div class="picture-slide">
+        <img src="https://occ-0-2342-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQjxESzPBtiYUkTrwm1X7WZUPOVH1lrglizyGEelM6a5DlRZC0Q0dj3og2MOFX9m9D-xEy8FnW9aOB1Py1tqeMSHJN-AHC-fZ6Bv.webp?r=e24" alt="Image 1" class="frierenimage">
+    </div>
+    <div class="picture-slide">
+        <img src="https://occ-0-2342-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQjxESzPBtiYUkTrwm1X7WZUPOVH1lrglizyGEelM6a5DlRZC0Q0dj3og2MOFX9m9D-xEy8FnW9aOB1Py1tqeMSHJN-AHC-fZ6Bv.webp?r=e24" alt="Image 1" class="frierenimage">
+    </div>
+
+</div>
 </body>
-<script></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".picture-slide");
+        let currentSlideIndex = 0;
+
+        function showSlide(index){
+            slides[currentSlideIndex].style.display = "none";
+            currentSlideIndex = (index + slides.length) % slides.length;
+            slides[currentSlideIndex].style.display = "block"
+        }
+
+        function nextSlide () {
+            showSlide(currentSlideIndex + 1); 
+        }
+        showSlide(currentSlideIndex);
+
+        setInterval(nextSlide,1000);
+    })
+</script>
 </html>

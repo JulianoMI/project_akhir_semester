@@ -9,3 +9,109 @@ body {
     background-color: black;
     font-weight: bold;
 }
+
+nav.top {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: fixed
+}
+
+img.netfliximage {
+    width: 12vw;
+    height: 10vh;
+    margin-left: 30px;
+}
+
+div.categories {
+display: flex;
+gap: 25vw;
+
+}
+ 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div.left {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    line-height: 10vh;
+}
+
+div.right {
+    line-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.box {
+    height: 38px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-top: 2vh;
+}
+
+.box:hover input {
+    width: 100px;
+
+}
+
+.box input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background-color: transparent;
+}
+
+.box a .fas {
+    color: white;
+    font-size: 20px;
+}
+
+div.profile{
+    width: 4vw;
+    height: 7vh;
+    background-image: url(pp.png);
+    background-size: 100% 100%;
+    margin-top: 11px;
+}
+
+
+.picture-slide{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    animation: slide 3s ease infinite;
+}
+
+
+@keyframes slide {
+    0%, 100% { opacity: 0;}
+    10%, 90% { opacity: 1;}
+}
+
+
+.frierenimage {
+    width: 100%;
+    height: 100%;
+}
+
+.title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 32vw;
+}
+
