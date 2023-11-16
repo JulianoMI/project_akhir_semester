@@ -40,7 +40,10 @@ nav button {
     margin-left: 10px;
     cursor: pointer;
 }
-
+.link {
+    text-decoration: none;
+    color: #fff;
+}
 .languange-btn  {
     display: inline-flex;
     align-items: center;

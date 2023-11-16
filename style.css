@@ -13,7 +13,7 @@ body {
 nav.top {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
 }
 
 img.netfliximage {
@@ -28,6 +28,9 @@ gap: 25vw;
 
 }
  
+div.left a:hover {
+    color: red;
+}
 a {
     text-decoration: none;
     color: white;
@@ -45,6 +48,10 @@ div.right {
     display: flex;
     flex-direction: row;
     gap: 24px;
+}
+
+.kids:hover {
+    color: red;
 }
 
 .box {
@@ -85,6 +92,62 @@ div.profile{
     background-size: 100% 100%;
     margin-top: 11px;
 }
+
+div.menu-icon{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid black; */
+    margin-top: 21px;
+}
+
+div.menu-icon span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white ;
+    margin: 0px auto;
+    margin-bottom: 8px;
+}
+
+ul{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:    77.9px;
+    background-color: black;
+    height: calc(45vh - 80px);
+    width: 250px;
+    /* display: flex; */
+    flex-direction: column;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+ul.show {
+    display: flex;
+}
+ul li {
+margin: 0px;
+padding: 0px;
+width: 100%;
+}
+ul li a {
+display: block;
+background-color: transparent;
+font-size: 24px;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul li a::before {
+content: "❓";
+}
+.menu-icon {
+    display: block;
+}
+
 
 
 .picture-slide{

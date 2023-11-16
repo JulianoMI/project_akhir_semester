@@ -23,11 +23,30 @@
                     <i class="fas fa-search">🔍</i>
                 </a>
             </div>
-            <a href="#">Kids</a>
+            <a href="#" class="kids">Kids</a>
             <a href="#">🔔</a>
             <div class="profile"></div>
+
+            <ul id = "menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+            </ul>
+
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div></nav>
+    </div>
+</nav>
 <div class="big-pictures">
     <div class="picture-slide">
         <img src="Screenshot 2023-11-14 110954.png" alt="Image 1" class="slideimage">
@@ -85,5 +104,21 @@
 
         setInterval(nextSlide, 3000);
     })
+
+    document.addEventListener("DOMContentLoaded", () => {
+                document.querySelector(".menu-icon").addEventListener('click', () =>{
+                    document.getElementById("menu").classList.toggle('show');
+                    localStorage.setItem('show', !showinfo)
+                } )
+                let showinfo;
+                if (!localStorage.getItem('show')){
+                    localStorage.setItem('show', false)
+                    
+                }
+                showinfo = JSON.parse(localStorage.getItem('show'));
+                if (showinfo){
+                    document.getElementById("menu").classList.toggle('show');
+                }
+               })
 </script>
 </html>
