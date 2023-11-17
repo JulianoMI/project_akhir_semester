@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -78,6 +78,31 @@ form .inputBox {
     top: 25px;
     transition: 0.2s ease all;
     border: none;
+}
+
+.showhide {
+    position: absolute;
+    top: 26px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60px;
+    color: #8c8c8c;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 99;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    visibility: hidden;
+}
+
+input:valid~.showhide, input:focus~.showhide{
+    visibility: visible;
 }
 
 .inputText, .submit-btn {

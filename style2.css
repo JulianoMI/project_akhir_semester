@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -266,5 +266,5 @@ input[type="radio"]{
 /* @media only screen and (max-width: 768px) {
  body{
     responsive: yes; :)
- }
+ } ("agak responsive lah ya sir, udah bagus itu nah webnya kalo responsive jadi ga butuh lagi :)")
 } */
